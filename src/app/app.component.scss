@@ -1,0 +1,13 @@
+.app-contianer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        padding: 20px;
+        flex: 0.8 1 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

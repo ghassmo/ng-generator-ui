@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./app/shared/theme.scss";
+
+* {
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    background-color: $background-color;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+}
+
+
+select {
+    background-color: $background-color-item;
+    color: white;
+    border-radius: $border-radius;
+    padding: 3px 10px;
+    font-size: 12px;
+    border: 1px solid $primary-color;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: $primary-color;
+    cursor: pointer;
+}
+
+.btn {
+    border: 2px solid $primary-color;
+    padding: 5px 15px;
+    border-radius: $border-radius;
+}
+
+.m-icon {
+    color: $primary-color !important;
+    font-size: 16px;
+    position: relative;
+    top: 3px;
+}

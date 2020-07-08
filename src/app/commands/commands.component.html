@@ -1,0 +1,26 @@
+<div class="commands-container">
+    <div class="command-line" *ngFor="let item of commandsList"><span>$</span> {{item}}</div>
+</div>
+<div class="options">
+    <div>
+        <button class="btn" (click)="onSave()">Save</button>
+        <button (click)="onClear()">Clear</button>
+    </div>
+    <div class="skip-tests">
+        <label for="skipTests">
+            <input 
+            [checked]="skipTests" 
+            (change)="onCheck()" 
+            type="checkbox" id="skipTests">
+            Create "spec.ts" test files
+        </label>
+    </div>
+    <div>
+        <p>
+            Save the file in the project directory.<br>
+            $ chmod +x ng.sh <br>
+            $ ./ng.sh
+
+        </p>
+    </div>
+</div>

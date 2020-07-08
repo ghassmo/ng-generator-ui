@@ -1,0 +1,23 @@
+@import "../shared/theme.scss";
+header {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    .logo {
+        color: white;
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    .links {
+        a {
+            color: $primary-color;
+            text-decoration: none;
+        }
+
+    }
+}

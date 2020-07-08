@@ -1,0 +1,84 @@
+@import "../../shared/theme.scss";
+
+:host {
+    display: block;
+    position: relative;
+    left: 30px;
+}
+
+.list-item {
+    box-shadow: $box-shadow;
+    background-color: $background-color-item;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: 2px solid $dark-color;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .detail-part {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        p {
+            margin-right: 10px;
+            color: $secondary-color;
+        }
+        p.tool-name {
+            color: rgba(248, 248, 248, 0.548);
+            font-size: 12px;
+        }
+    }
+
+    .tools-part{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+}
+
+.item-container::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    z-index: 2;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 19px;
+    background-color: $dark-color;
+}
+
+.list-item::before {
+    content: "";
+    padding: 1px;
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    top: 20px;
+    background-color: $dark-color;
+    opacity: 0.4;
+}
+
+.add-item-form {
+    form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        input{
+            margin-right: 10px;
+        }
+    }
+}
+
+.add-input {
+    width: 100px;
+    border: none;
+    padding: 5px 20px;
+    background-color: $background-color-item;
+    color: white;
+    border-radius: $border-radius;
+}

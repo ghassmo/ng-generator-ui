@@ -1,0 +1,32 @@
+<div class="item-container" #nodescontainer>
+    <div class="list-item">
+        <div class="detail-part">
+            <p>{{nodeItem.name | titlecase}} </p>
+            <p class="tool-name">
+                {{nodeItem.type | titlecase}}
+            </p>
+        </div>
+        <div class="tools-part">
+            <ng-container *ngIf="nodeItem.name !== 'APP'">
+                <button (click)="onDeleteNode()">
+                    <i class="m-icon material-icons">delete</i>
+                </button>
+                <button (click)="onUpdateNode()">
+                    <i class="m-icon material-icons">edit</i>
+                </button>
+            </ng-container>
+            <button (click)="onAddNewNode()">
+                <i class="m-icon material-icons">add</i> </button>
+        </div>
+    </div>
+    <div *ngIf="showAddForm" class="add-item-form">
+        <form [formGroup]="addForm" (ngSubmit)="addNewNode()">
+            <input class="add-input" formControlName="name" type="text" placeholder="Name">
+            <select formControlName="type">
+                <option value="" disabled selected>Type</option>
+                <option *ngFor="let item of types" [value]="item">{{item}}</option>
+            </select>
+            <button type="submit"> <i class="m-icon material-icons">{{ updateMode ? 'edit' : 'add'}}</i> </button>
+        </form>
+    </div>
+</div>

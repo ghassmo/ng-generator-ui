@@ -1,0 +1,36 @@
+
+@import '../shared/theme.scss';
+
+.commands-container{
+    width: 300px;
+    min-height: 600px;
+    box-shadow: $box-shadow;
+    background-color: $background-color-item;
+    border: 2px solid $dark-color;
+    padding: 20px;
+    color: $command-line-color;
+    border-radius: $border-radius;
+    .command-line{
+        span{
+            color: $primary-color;
+        }
+    }
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    padding: 20px;
+    .skip-tests{
+        margin: 20px 0;
+        color: $primary-color;
+        input{
+            margin-right:4px;
+        }
+    }
+    p{
+        color: rgba(255, 255, 255, 0.568);
+    }
+}
